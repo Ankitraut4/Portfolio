@@ -86,7 +86,7 @@ export default function Intro() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          I'm Ankit Raut
+          I am Ankit Raut
         </motion.h1>
 
         <AnimatePresence mode="wait">
