@@ -7,7 +7,9 @@ import {
   BrainCircuit,
   ServerCog,
   Boxes,
+  Smartphone,
   CheckCircle2,
+  Network,
 } from "lucide-react";
 
 const container = {
@@ -26,7 +28,7 @@ const item = {
 
 type PillProps = { label: string };
 const Pill = ({ label }: PillProps) => (
-  <span className="inline-flex items-center rounded-full border border-black/10 dark:border-white/10 px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-200 bg-white/70 dark:bg-white/5 backdrop-blur">
+  <span className="inline-flex items-center rounded-full border border-black/10 dark:border-white/10 px-3 py-1 text-xs font-medium text-gray-800 dark:text-gray-200 bg-white/80 dark:bg-white/5 backdrop-blur">
     {label}
   </span>
 );
@@ -34,7 +36,7 @@ const Pill = ({ label }: PillProps) => (
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <li className="flex gap-2">
     <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" />
-    <span className="text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+    <span className="text-sm leading-relaxed text-gray-800 dark:text-gray-300">
       {children}
     </span>
   </li>
@@ -56,10 +58,10 @@ const Deco = () => (
         <stop offset="100%" stopColor="#F43F5E" />
       </linearGradient>
     </defs>
-    <rect x="20" y="30" width="180" height="110" rx="16" fill="url(#g1)" />
-    <circle cx="290" cy="85" r="55" fill="url(#g2)" />
-    <rect x="80" y="170" width="260" height="90" rx="18" fill="#0ea5e91a" />
-    <g fill="#111827" fillOpacity="0.12">
+    <rect x="20" y="30" width="180" height="110" rx="16" fill="url(#g1)" opacity="0.9" />
+    <circle cx="290" cy="85" r="55" fill="url(#g2)" opacity="0.9" />
+    <rect x="80" y="170" width="260" height="90" rx="18" fill="#0ea5e930" />
+    <g fill="#111827" fillOpacity="0.18">
       <circle cx="60" cy="210" r="14" />
       <circle cx="110" cy="210" r="8" />
       <rect x="140" y="200" width="50" height="8" rx="4" />
@@ -74,8 +76,7 @@ export default function WhatIDo() {
       className="relative scroll-mt-20 py-14 md:py-20"
       aria-label="What I Do"
     >
-      {/* Lightened background */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-slate-100 to-slate-50 dark:from-gray-900 dark:to-gray-800" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-slate-50 to-slate-100 dark:from-gray-900 dark:to-gray-800" />
 
       <motion.div
         initial="hidden"
@@ -86,209 +87,136 @@ export default function WhatIDo() {
       >
         <motion.h2
           variants={item}
-          className="text-center text-4xl md:text-5xl font-extrabold tracking-tight text-gray-100 dark:text-white"
+          className="text-center text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white"
         >
-          What I Do ?
+          What I Do 🚀
         </motion.h2>
 
         <motion.p
           variants={item}
-          className="mx-auto mt-2 max-w-2xl text-center text-sm text-gray-300/90 dark:text-gray-400"
+          className="mx-auto mt-2 max-w-2xl text-center text-sm text-gray-700 dark:text-gray-300"
         >
-          A snapshot of the areas I build in — from cloud platforms and ML to
-          reliable backends and enterprise systems.
+          I engineer high-reliability backend, cloud, and AI systems — combining
+          distributed infrastructure, automation, and SwiftUI front-ends into
+          cohesive, production-grade platforms.
         </motion.p>
 
-        {/* Grid of bands */}
         <div className="mt-8 space-y-8">
-          {/* Cloud */}
-          <motion.div
-            variants={item}
-            className="grid items-center gap-6 rounded-2xl border border-black/10 bg-white/5 p-6 shadow-sm backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.03]"
-          >
+          {/* Cloud Infrastructure */}
+          <motion.div variants={item} className="grid items-center gap-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] p-6 shadow-sm backdrop-blur-sm">
             <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[auto,1fr]">
               <Deco />
               <div>
                 <div className="flex items-center gap-3">
-                  <Cloud className="h-6 w-6 text-sky-400" />
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-100">
-                    Cloud Computing
+                  <Cloud className="h-6 w-6 text-sky-500" />
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+                    Cloud Infrastructure & DevOps
                   </h3>
                 </div>
-
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {[
-                    "AWS",
-                    "GCP",
-                    "Azure",
-                    "Docker",
-                    "Kubernetes",
-                    "Terraform",
-                  ].map((t) => (
-                    <Pill key={t} label={t} />
-                  ))}
+                  {["AWS (EC2, Lambda, RDS, S3)", "Kubernetes", "Terraform", "Docker", "CloudWatch", "CI/CD (GitHub Actions, Jenkins)"].map(t => <Pill key={t} label={t} />)}
                 </div>
-
                 <ul className="mt-4 space-y-2">
-                  <Bullet>
-                    Deployed apps on VMs & serverless; wired up managed DBs and
-                    queues.
-                  </Bullet>
-                  <Bullet>
-                    Built PaaS style environments for ML/HPC workloads with IaC
-                    (Terraform).
-                  </Bullet>
-                  <Bullet>
-                    Designed pod‑to‑pod comms & network policies for secure K8s
-                    clusters.
-                  </Bullet>
-                  <Bullet>
-                    Automated blue‑green and rolling releases with GitHub
-                    Actions.
-                  </Bullet>
+                  <Bullet>Architected AWS workloads with Lambda, RDS, and Bedrock; optimized cost by 40%.</Bullet>
+                  <Bullet>Implemented blue-green deployments and automated rollbacks via GitHub Actions.</Bullet>
+                  <Bullet>Enhanced observability with structured logs and CloudWatch dashboards.</Bullet>
+                  <Bullet>Reduced downtime by designing resilient, multi-AZ cloud environments.</Bullet>
                 </ul>
               </div>
             </div>
           </motion.div>
 
-          {/* ML & AI */}
-          <motion.div
-            variants={item}
-            className="grid items-center gap-6 rounded-2xl border border-black/10 bg-white/5 p-6 shadow-sm backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.03]"
-          >
+          {/* Backend Engineering */}
+          <motion.div variants={item} className="grid items-center gap-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] p-6 shadow-sm backdrop-blur-sm">
             <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[auto,1fr]">
               <Deco />
               <div>
                 <div className="flex items-center gap-3">
-                  <BrainCircuit className="h-6 w-6 text-fuchsia-400" />
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-100">
-                    Machine Learning & AI
+                  <Boxes className="h-6 w-6 text-emerald-500" />
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+                    Backend & Distributed Systems
                   </h3>
                 </div>
-
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {[
-                    "PyTorch",
-                    "TensorFlow",
-                    "Keras",
-                    "NLP",
-                    "GenAI",
-                    "Time‑Series",
-                  ].map((t) => (
-                    <Pill key={t} label={t} />
-                  ))}
+                  {["Golang", "Python", "Spring Boot", "FastAPI", "PostgreSQL", "DynamoDB", "Kafka/SNS/SQS"].map(t => <Pill key={t} label={t} />)}
                 </div>
-
                 <ul className="mt-4 space-y-2">
-                  <Bullet>
-                    Trained and served deep‑learning models end‑to‑end (data →
-                    deploy).
-                  </Bullet>
-                  <Bullet>
-                    Built GenAI/NLP pipelines: embeddings, retrieval, and
-                    transfer learning.
-                  </Bullet>
-                  <Bullet>
-                    Forecasting & quantitative modeling for dynamic time‑series.
-                  </Bullet>
-                  <Bullet>
-                    Packaged models into APIs and batch jobs with Docker +
-                    FastAPI/Flask.
-                  </Bullet>
+                  <Bullet>Built microservices handling 2M+ monthly requests with 98% uptime.</Bullet>
+                  <Bullet>Designed gRPC APIs with rate limiting, load balancing, and idempotent processing.</Bullet>
+                  <Bullet>Integrated Kafka & SQS for event-driven streaming pipelines.</Bullet>
+                  <Bullet>Refactored legacy systems into modular, cloud-native services.</Bullet>
                 </ul>
               </div>
             </div>
           </motion.div>
 
-          {/* Enterprise Systems */}
-          <motion.div
-            variants={item}
-            className="grid items-center gap-6 rounded-2xl border border-black/10 bg-white/5 p-6 shadow-sm backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.03]"
-          >
+          {/* AI / ML */}
+          <motion.div variants={item} className="grid items-center gap-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] p-6 shadow-sm backdrop-blur-sm">
             <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[auto,1fr]">
               <Deco />
               <div>
                 <div className="flex items-center gap-3">
-                  <ServerCog className="h-6 w-6 text-amber-400" />
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-100">
-                    Enterprise Systems
+                  <BrainCircuit className="h-6 w-6 text-fuchsia-500" />
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+                    Applied AI & ML Systems
                   </h3>
                 </div>
-
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {["Linux", "Windows", "Nginx", "OpenSSL", "RabbitMQ"].map(
-                    (t) => (
-                      <Pill key={t} label={t} />
-                    )
-                  )}
+                  {["PyTorch", "scikit-learn", "OpenCV", "LangChain", "RAG Pipelines", "LLMs (OpenAI API)"].map(t => <Pill key={t} label={t} />)}
                 </div>
-
                 <ul className="mt-4 space-y-2">
-                  <Bullet>
-                    Managed Linux/Windows fleets; hardened configs &
-                    observability.
-                  </Bullet>
-                  <Bullet>
-                    User auditing & security logging for config drift and
-                    anomalous activity.
-                  </Bullet>
-                  <Bullet>
-                    Health‑checker services via RabbitMQ to trigger critical
-                    alerts.
-                  </Bullet>
-                  <Bullet>
-                    Wrote privileged helper daemons with strict capability
-                    scopes.
-                  </Bullet>
+                  <Bullet>Integrated LLMs and RAG for image captioning and text retrieval pipelines.</Bullet>
+                  <Bullet>Deployed ML inference services achieving 50 ms per-image latency.</Bullet>
+                  <Bullet>Built data-driven dashboards with Streamlit & Matplotlib for monitoring model metrics.</Bullet>
+                  <Bullet>Extended 3D Gaussian Splat segmentation with contrastive learning modules.</Bullet>
                 </ul>
               </div>
             </div>
           </motion.div>
 
-          {/* Backend */}
-          <motion.div
-            variants={item}
-            className="grid items-center gap-6 rounded-2xl border border-black/10 bg-white/5 p-6 shadow-sm backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.03]"
-          >
+          {/* iOS Development */}
+          <motion.div variants={item} className="grid items-center gap-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] p-6 shadow-sm backdrop-blur-sm">
             <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[auto,1fr]">
               <Deco />
               <div>
                 <div className="flex items-center gap-3">
-                  <Boxes className="h-6 w-6 text-emerald-400" />
-                  <h3 className="text-lg md:text-xl font-semibold text-gray-100">
-                    Back‑End Development
+                  <Smartphone className="h-6 w-6 text-indigo-500" />
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+                    iOS Development
                   </h3>
                 </div>
-
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {[
-                    "Node.js",
-                    "Express",
-                    "FastAPI",
-                    "Flask",
-                    "PostgreSQL",
-                    "MongoDB",
-                    "Redis",
-                  ].map((t) => (
-                    <Pill key={t} label={t} />
-                  ))}
+                  {["SwiftUI", "Combine", "Core Data", "REST API Integration"].map(t => <Pill key={t} label={t} />)}
                 </div>
-
                 <ul className="mt-4 space-y-2">
-                  <Bullet>
-                    Designed REST APIs; real‑time data with websockets when
-                    needed.
-                  </Bullet>
-                  <Bullet>
-                    AuthN/AuthZ with JWT & OAuth2; session + token hygiene.
-                  </Bullet>
-                  <Bullet>
-                    Unit/integration tests (Mocha/Chai); CI for quality gates.
-                  </Bullet>
-                  <Bullet>
-                    Built and deployed microservices with structured logging &
-                    tracing.
-                  </Bullet>
+                  <Bullet>Developed diagnostic and log-visualization apps for internal DevOps tooling.</Bullet>
+                  <Bullet>Built smooth UI interactions using SwiftUI and Combine state management.</Bullet>
+                  <Bullet>Integrated backend APIs securely for authentication and data sync.</Bullet>
+                  <Bullet>Published internal builds via TestFlight and improved bug triage speed by 25%.</Bullet>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* System Architecture */}
+          <motion.div variants={item} className="grid items-center gap-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] p-6 shadow-sm backdrop-blur-sm">
+            <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[auto,1fr]">
+              <Deco />
+              <div>
+                <div className="flex items-center gap-3">
+                  <Network className="h-6 w-6 text-amber-500" />
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+                    Architecture & Reliability
+                  </h3>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {["System Design", "Observability", "CI/CD Pipelines", "Fault Tolerance", "Performance Tuning"].map(t => <Pill key={t} label={t} />)}
+                </div>
+                <ul className="mt-4 space-y-2">
+                  <Bullet>Modeled distributed systems with resilience, latency budgets, and back-pressure handling.</Bullet>
+                  <Bullet>Applied observability patterns (logs, metrics, traces) for production debugging.</Bullet>
+                  <Bullet>Led cross-team design reviews and RFCs improving feature delivery velocity.</Bullet>
+                  <Bullet>Mentored 7-member distributed engineering team on DevOps & clean code practices.</Bullet>
                 </ul>
               </div>
             </div>

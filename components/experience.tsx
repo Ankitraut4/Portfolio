@@ -41,7 +41,7 @@ export default function Experience() {
                   ? "0.4rem solid #4b5563"
                   : "0.4rem solid rgba(255, 255, 255, 0.5)",
             }}
-            date={item.date}
+            
             icon={item.icon}
             iconStyle={{
               background:
@@ -62,8 +62,10 @@ export default function Experience() {
                 {item.title}
               </h3>
               <p className="text-sm text-teal-400 font-medium mt-1">
-                {item.location}
-              </p>
+                {item.location}{" "}
+                <span className="text-gray-400 font-normal">| {item.date}</span>
+                
+              </p> 
 
               
 

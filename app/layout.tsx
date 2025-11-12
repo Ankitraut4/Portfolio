@@ -10,7 +10,7 @@ import ThemeProvider from "@/context/theme-context";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Chaitanya Chaudhari Portfolio",
+  title: "Ankit Raut Portfolio",
   description: "",
 };
 

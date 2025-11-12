@@ -58,7 +58,7 @@ export default function PortfolioHighlight() {
           cloud-native solutions
         </p>
         <a
-          href="https://github.com/Chaitanya980"
+          href="https://github.com/Ankitraut4"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-yellow-500 text-black font-semibold py-3 px-6 rounded-full hover:bg-yellow-600 transition duration-300"

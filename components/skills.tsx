@@ -6,8 +6,12 @@ import { useSectionInView } from "@/lib/hooks";
 import {
   FaCode,
   FaCloud,
-  FaBrain,
   FaUserFriends,
+  FaBrain,
+  FaMobileAlt,
+  FaNetworkWired,
+  FaUsersCog,
+
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -20,59 +24,87 @@ export default function Skills() {
   const { ref } = useSectionInView("Skills");
 
   const skillCategories = [
-    {
-      icon: <FaCode />,
-      title: "Technical Skills",
-      description: "Languages, frameworks, and databases I use to build robust systems.",
-      color: "bg-gradient-to-r from-cyan-700 to-blue-700",
-      skills: [
-        "React.js & Redux",
-        "Next.js & TypeScript",
-        "Node.js & Express.js",
-        "MongoDB & MySQL",
-        "JWT Authentication & REST APIs",
-      ],
-    },
-    {
-      icon: <FaCloud />,
-      title: "DevOps & Cloud",
-      description: "Tools and platforms I use to deploy, scale, and automate systems.",
-      color: "bg-gradient-to-r from-indigo-600 to-purple-700",
-      skills: [
-        "AWS (EC2, RDS, S3)",
-        "Docker & Kubernetes",
-        "CI/CD (GitHub Actions, Jenkins)",
-        "Terraform & Rancher",
-        "Vercel & Netlify",
-      ],
-    },
-    {
-      icon: <FaUserFriends />,
-      title: "Soft Skills & Tools",
-      description: "Collaboration and productivity strengths I bring to technical teams.",
-      color: "bg-gradient-to-r from-green-600 to-emerald-700",
-      skills: [
-        "Problem Solving",
-        "Team Collaboration",
-        "Agile & Scrum",
-        "Git & Linux CLI",
-        "JIRA & Notion",
-      ],
-    },
-    {
-      icon: <FaBrain />,
-      title: "AI/ML Skills",
-      description: "Technologies and models I use to create intelligent applications.",
-      color: "bg-gradient-to-r from-pink-600 to-red-600",
-      skills: [
-        "Natural Language Processing",
-        "LLMs (LLaMA 3, OpenAI API)",
-        "Predictive Modeling",
-        "LangChain & Chroma",
-        "Streamlit & MarianMT",
-      ],
-    },
-  ];
+  {
+    icon: <FaCode />,
+    title: "Software Engineering",
+    description:
+      "Core programming languages, frameworks, and architectures I use to design scalable systems.",
+    color: "bg-gradient-to-r from-cyan-700 to-blue-700",
+    skills: [
+      "Golang • Python • Java • SwiftUI",
+      "React.js • Angular • Spring Boot • FastAPI",
+      "PostgreSQL • MySQL • DynamoDB • MongoDB",
+      "Microservices • REST/gRPC APIs • System Design",
+      "Object-Oriented Programming • Clean Architecture",
+    ],
+  },
+  {
+    icon: <FaCloud />,
+    title: "Cloud & DevOps",
+    description:
+      "Infrastructure, automation, and deployment stack powering high-availability environments.",
+    color: "bg-gradient-to-r from-indigo-600 to-purple-700",
+    skills: [
+      "AWS (EC2, Lambda, RDS, S3, CloudWatch, DynamoDB, Bedrock)",
+      "Docker • Kubernetes • Terraform",
+      "CI/CD (Jenkins, GitHub Actions, GitLab)",
+      "Serverless Architectures • Blue/Green Deployments",
+      "Monitoring & Observability (Prometheus, CloudWatch)",
+    ],
+  },
+  {
+    icon: <FaMobileAlt />,
+    title: "iOS Development",
+    description:
+      "Building responsive and data-driven mobile apps with Apple’s modern frameworks.",
+    color: "bg-gradient-to-r from-sky-600 to-indigo-600",
+    skills: [
+      "SwiftUI • UIKit • Combine",
+      "Core Data • REST API Integration",
+      "UI/UX Design • State Management",
+      "TestFlight Deployment • Diagnostics Tools",
+    ],
+  },
+  {
+    icon: <FaBrain />,
+    title: "AI & Machine Learning",
+    description:
+      "AI frameworks and workflows integrated into real-world products and backend pipelines.",
+    color: "bg-gradient-to-r from-pink-600 to-red-600",
+    skills: [
+      "PyTorch • scikit-learn • OpenCV",
+      "LLMs (OpenAI, LangChain, RAG Pipelines)",
+      "NLP • Image Processing • Predictive Modeling",
+      "Data Analysis (Pandas, NumPy, Matplotlib)",
+    ],
+  },
+  {
+    icon: <FaNetworkWired />,
+    title: "Architecture & Systems",
+    description:
+      "Designing resilient distributed systems focused on scalability, reliability, and performance.",
+    color: "bg-gradient-to-r from-yellow-600 to-orange-600",
+    skills: [
+      "Distributed Systems • Fault Tolerance • Event Streaming (Kafka, SNS/SQS)",
+      "API Versioning • Contract Testing • Multi-Tenant Design",
+      "Performance Optimization • Load Balancing • Caching Strategies",
+    ],
+  },
+  {
+    icon: <FaUsersCog />,
+    title: "Leadership & Collaboration",
+    description:
+      "Interpersonal and operational skills driving engineering productivity and delivery.",
+    color: "bg-gradient-to-r from-green-600 to-emerald-700",
+    skills: [
+      "Technical Mentorship • Cross-Team Collaboration",
+      "Agile & Scrum • Problem Solving • Documentation",
+      "Git • Linux CLI • Jira • Notion • Confluence",
+      "Code Reviews • RFC Authoring • Continuous Improvement",
+    ],
+  },
+];
+
 
   return (
     <section id="skills" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">

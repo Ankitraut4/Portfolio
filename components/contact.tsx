@@ -72,13 +72,13 @@ export default function Contact() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {/* Phone */}
             <a
-              href="tel:+15716039977"
+              href="tel:+15712244890"
               className="group rounded-2xl border border-white/10 bg-white/5 p-4 text-center shadow-sm backdrop-blur-sm transition hover:shadow-md hover:bg-white/10 active:scale-[0.99] dark:border-white/10"
             >
               <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-teal-400 to-sky-500 text-white">
                 <FaPhone />
               </div>
-              <p className="text-sm text-gray-200">+1 (571) 603-9977</p>
+              <p className="text-sm text-gray-200">+1 (571) 224-4890</p>
               <span className="mt-1 inline-block text-xs text-gray-400 group-hover:text-gray-300">
                 Tap to call
               </span>
@@ -86,14 +86,14 @@ export default function Contact() {
 
             {/* Email */}
             <a
-              href="mailto:chaitanyac598@gmail.com"
+              href="mailto:ankitraut9421@gmail.com"
               className="group rounded-2xl border border-white/10 bg-white/5 p-4 text-center shadow-sm backdrop-blur-sm transition hover:shadow-md hover:bg-white/10 active:scale-[0.99] dark:border-white/10"
             >
               <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-400 to-fuchsia-500 text-white">
                 <FaEnvelope />
               </div>
               <p className="truncate text-sm text-gray-200">
-                chaitanyac598@gmail.com
+                ankitraut9421@gmail.com
               </p>
               <span className="mt-1 inline-block text-xs text-gray-400 group-hover:text-gray-300">
                 Tap to email
@@ -180,7 +180,7 @@ export default function Contact() {
           </form>
         </div>
 
-        {/* RIGHT: Blog CTA */}
+        {/* RIGHT:Current work */}
         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-8 shadow-sm">
           {/* soft glow */}
           <div className="pointer-events-none absolute -top-16 -right-16 h-56 w-56 rounded-full bg-fuchsia-500/20 blur-3xl" />
@@ -188,20 +188,20 @@ export default function Contact() {
 
           <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
             <h2 className="bg-gradient-to-r from-white to-slate-200 bg-clip-text text-4xl font-bold text-transparent">
-              Blogs
+              What I’m Working On :)  
             </h2>
             <p className="mt-3 max-w-md text-gray-300">
-              I share insights from real projects—cloud tips, backend patterns,
-              ML experiments, and lessons learned along the way.
+              My team and I are building a positive, non-toxic social app where users can connect with up to 5 close friends and create AI-generated “inside-out” selfies. We’d love for you to join our beta testing group and help us improve the experience with your feedback!
+
             </p>
 
             <Link
-              href="https://chaitanya-chaudhari.medium.com"
+              href="http://zenziee.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white/10 px-6 py-3 text-sm font-medium text-white ring-1 ring-white/20 transition hover:bg-white/20 hover:ring-white/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900"
             >
-              Visit My Blogsite
+              Try Our App First
               <svg
                 className="h-4 w-4"
                 viewBox="0 0 24 24"
@@ -212,16 +212,16 @@ export default function Contact() {
               </svg>
             </Link>
 
-            {/* mini list of recent topics (static placeholders; swap if you fetch) */}
+            {/* mini list of our app features */}
             <ul className="mt-6 w-full max-w-sm space-y-2 text-left text-sm text-gray-300/90">
               <li className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">
-                • Docker Compose for multi‑service dev
+                • No likes, no judgment — just genuine connection 
               </li>
               <li className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">
-                • Designing JWT auth cleanly with Node/Express
+                • Positive prompts & gentle interactions to keep the vibe healthy 
               </li>
               <li className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">
-                • Serving PyTorch models with FastAPI
+                • Daily mood check-ins to understand yourself better  
               </li>
             </ul>
           </div>

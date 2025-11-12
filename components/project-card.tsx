@@ -9,6 +9,7 @@ type Props = {
   description: string;
   codeUrl?: string;
   liveUrl?: string;
+  tags?: string[]; // ✅ Added tags support
   className?: string;
   children?: React.ReactNode; // optional thumbnail/img
 };
@@ -18,6 +19,7 @@ export default function ProjectCard({
   description,
   codeUrl,
   liveUrl,
+  tags,
   className,
   children,
 }: Props) {
@@ -26,20 +28,22 @@ export default function ProjectCard({
   return (
     <article
       className={clsx(
+        // 🔹 Core styling
         "group relative rounded-2xl border border-white/10 bg-white/5 p-5 shadow-md backdrop-blur-sm transition-all duration-300",
         "hover:shadow-xl hover:-translate-y-0.5 dark:bg-gray-900/40 dark:border-black/30",
         "focus-within:ring-2 focus-within:ring-indigo-500",
+        // 🔹 Layout fixes
+        "overflow-visible break-words max-w-full h-auto min-h-[22rem]",
         className
       )}
       tabIndex={0}
       aria-label={title}
     >
-      {/* Optional visual/thumbnail area */}
+      {/* Optional image/thumbnail */}
       {children && (
         <div className="mb-4 overflow-hidden rounded-xl relative">
           <div className="aspect-[16/9]">{children}</div>
 
-          {/* Gradient veil on hover for better contrast */}
           {hasAnyAction && (
             <div
               className={clsx(
@@ -52,8 +56,29 @@ export default function ProjectCard({
         </div>
       )}
 
-      <h3 className="text-xl font-semibold text-white">{title}</h3>
-      <p className="mt-2 text-sm text-gray-300 leading-relaxed">{description}</p>
+      {/* Title */}
+      <h3 className="text-xl font-semibold text-white break-words">
+        {title}
+      </h3>
+
+      {/* Description */}
+      <p className="mt-3 text-sm text-gray-300 leading-relaxed break-words max-w-full">
+        {description}
+      </p>
+
+      {/* ✅ Tags Section */}
+      {tags && tags.length > 0 && (
+        <div className="mt-5 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs font-medium px-2.5 py-1 rounded-full bg-white/10 text-gray-200 dark:text-gray-300 transition-transform duration-200 hover:-translate-y-0.5"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
 
       {/* Hover / focus actions */}
       {hasAnyAction && (

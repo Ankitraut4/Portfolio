@@ -17,115 +17,178 @@ export const links = [
   { name: "Contact", hash: "#contact" },
 ] as const;
 
+
+import { LuBriefcase } from "react-icons/lu";
+import { table } from "console";
+
 export const experiencesData = [
   {
-    title: "Software Development Intern",
-    location: "Cognifront Software Pvt. Ltd ",
+    title: "Full-Stack Engineer & Cloud Infrastructure Lead",
+    location: "YesTech Corp — Remote (USA)",
+    date: "Feb 2025 – Present",
     description: [
-      "Developed reusable UI components using JavaScript and React, improving development efficiency and ensuring consistent design across web applications.",
-      "Optimized backend queries with PHP and MySQL, reducing API response times by 30% and enhancing application performance.",
-      "Refactored database schema to streamline data retrieval, cutting query latency by 20% and improving scalability.",
-      "Implemented responsive design enhancements using CSS and Tailwind CSS, increasing mobile user engagement by 15%.",
+      "Re-architected AI image-generation backend (Go + Python on AWS Athena, DynamoDB, S3, Lambda) → cut latency 25% and raised reliability 40%.",
+      "Built typed SDKs and observability stack (CloudWatch + Bedrock metrics) powering 500+ AI workflows/month with automated rollbacks.",
+      "Reduced AWS cost by ≈ $900/month via cross-region caching and Terraform-based infrastructure-as-code.",
+      "Mentored 7 engineers on CI/CD pipelines and incident post-mortems, improving deployment stability 45%.",
     ],
-    icon: React.createElement(LuGraduationCap),
-    date: "Jan 2023 - Mar 2023",
+    icon: React.createElement(LuBriefcase),
   },
   {
-    title: "Data Science & Business Analytics Intern",
-    location: "The Sparks Foundation",
+    title: "Software Engineer P1",
+    location: "LTIMindtree Limited — Pune, India",
+    date: "Jun 2022 – Jan 2024",
     description: [
-      "Built and deployed predictive machine learning models using Scikit-learn and TensorFlow, achieving a 20% improvement in model accuracy for business forecasting.",
-      "Automated data cleaning and preprocessing pipelines with Python and Pandas, reducing manual effort by 25% and improving dataset quality.",
-      "Designed and published interactive dashboards using Tableau and Power BI, enabling stakeholders to make data-driven decisions 30% faster.",
+      "Designed and operated distributed Go/Spring Boot microservices handling 2M+ requests/month @ 98% uptime with rate limiting and load balancing.",
+      "Integrated Kafka/SQS event pipelines achieving +35% throughput and exactly-once delivery semantics.",
+      "Delivered multi-tenant API versioning + contract testing → zero breaking changes across 30k transactions/day.",
+      "Automated CI/CD (Jenkins + Docker + Terraform) reducing deployment failures 40%.",
+      "Authored RFCs and led architecture reviews increasing release velocity 15%.",
     ],
-    icon: React.createElement(LuGraduationCap),
-    date: "Dec 2022 - Jan 2023",
+    icon: React.createElement(LuBriefcase),
+  },
+  {
+    title: "Java Full-Stack Developer Intern",
+    location: "LTIMindtree Limited — Pune, India",
+    date: "Feb 2022 – May 2022",
+    description: [
+      "Shipped Spring Boot + Angular features across 5 production releases; optimized PostgreSQL schema (−120 ms p95 latency).",
+      "Added in-memory caching layer supporting 2k+ concurrent users with 99.8% success rate.",
+      "Automated hospital reception workflows (450+ daily appointments) → −20% check-in time and −15% data-entry errors.",
+    ],
+    icon: React.createElement(LuBriefcase),
   },
 ] as const;
 
+
 export const projectsData = [
   {
-    title: "Cloud Infrastructure Automation",
-    description:
-      " This project demonstrates a CI/CD pipeline using Terraform to provision AWS infrastructure and GitHub Actions to deploy a Dockerized Node.js app on EC2.",
-    tags: ["Terraform", "Docker", "Node", "CI/CD", "GitHub Actions"],
-    imageUrl: factchecker,                    
-    githubUrl: "https://github.com/Chaitanya980/terraform",
-    liveUrl: "",                               
-  },
+  title: "3D Gaussian Splat Segmentation (Built on Meta's EgoLifter)",
+  description: "Enhanced Meta’s EgoLifter with SAM2 and MLP-based 3DGS embeddings for stable 3D video segmentation. Trained on Project Aria data using PyTorch Lightning and WandB.",
+  tags: [
+    "Python",
+    "PyTorch Lightning",
+    "3D Gaussian Splatting",
+    "Computer Vision",
+    "SAM2",
+    "MLP Embedding",
+    "Contrastive Learning",
+    "WandB",
+    "uv Package Manager",
+    "Project Aria Dataset",
+  ],
+  imageUrl: factchecker, // replace with your image variable
+  githubUrl:
+    "https://github.com/Ankitraut4/3D-Gaussian-Splat-Segmentation-Built-on-Meta-s-EgoLifter-model-",
+  liveUrl: "", // add if you later host a viewer or demo
+},
   {
-    title: "Product Recommendation Engine ",
-    description:
-      "A Python-based product recommendation engine leveraging collaborative filtering and cosine similarity for personalized e-commerce suggestions.",
-    tags: ["Python", "TF-IDF Vectorizatio", "Scikit-learn"],
-    imageUrl: factchecker,                    
-    githubUrl: "https://github.com/Chaitanya980/Product-Recommendation-Engine",
-    liveUrl: "",                               
-  },
+  title: "Hospital Reception Service",
+  description:
+"Developed a full-stack hospital portal with AngularJS and Spring Boot to streamline doctor-patient management. Integrated RESTful APIs and MySQL for CRUD operations with responsive UI and embedded Tomcat deployment.",
+  tags: [
+    "Java",
+    "Spring Boot",
+    "AngularJS",
+    "REST API",
+    "MySQL",
+    "Tomcat Server",
+    "Maven",
+    "Full-Stack Development",
+    "CRUD Operations",
+  ],
+  imageUrl: factchecker, // replace with your actual imported image
+  githubUrl: "https://github.com/Ankitraut4/Hospital-Reception-Service",
+  liveUrl: "", // optional if you deploy the app
+},
+ {
+  title: "NLP-Powered SQL Query Generation System",
+  description:
+"Built an NLP-to-SQL chatbot fine-tuned on the BART Transformer to translate text into SQL queries. Integrated with SQLite and deployed via Gradio for real-time query execution with fuzzy schema matching and multi-CSV support.",
+  tags: [
+    "Python",
+    "NLP",
+    "BART Transformer",
+    "Hugging Face",
+    "Gradio",
+    "SQLite",
+    "Text-to-SQL",
+    "Machine Learning",
+    "Regex & Fuzzy Matching",
+    "Data Query Automation",
+  ],
+  imageUrl: factchecker, // replace with your actual imported image
+  githubUrl:
+    "https://github.com/Ankitraut4/NLP-Powered-SQL-Query-Generation-System-for-Interactive-Database-Querying",
+  liveUrl:
+    "https://huggingface.co/spaces/Rushikesh-S-Ware/NLP-SQL-Transformer",
+},
   {
-    title: "Fact Checker for Multilingual News",
-    description:
-      "Developing an AI-powered tool to combat misinformation by scrapping, translating and fact-checking news articles in English and Spanish",
-    tags: ["Python", "MarianMT", "Streamlit", "JSON", "ChromaDB"],
-    imageUrl: factchecker,                    
-    githubUrl: "https://github.com/Chaitanya980/AI-Fact-Check-For-Multilingual-News",
-    liveUrl: "",                               
-  },
+  title: "Pacman Game",
+  description:
+"Implemented a Perceptron-based classifier from scratch using NumPy for digit and Pacman datasets. Added CLI support for training and testing, with feature-weight visualization to highlight model interpretability and algorithmic depth.",
+  tags: [
+    "Python",
+    "Machine Learning",
+    "Perceptron Algorithm",
+    "Linear Model",
+    "Classification",
+    "NumPy",
+    "CLI Application",
+    "Feature Engineering",
+    "Model Evaluation",
+  ],
+  imageUrl: factchecker, // replace with your imported image asset
+  githubUrl: "https://github.com/Ankitraut4/Pacman",
+  liveUrl: "", // optional — you can host a simple demo if needed
+},
+
   {
-    title: "UniSurvey",
-    description:
-      "A deployed survey application that enables feedback collection and analytics for campus use. Features a responsive UI, secure backend, and CI/CD pipeline with Docker for scalable deployment..",
-    tags: ["MySQL (AWS RDS)", "Angular", "Spring Boot", "Tailwind", "CI/CD"],
-    imageUrl: uni,
-    githubUrl: "https://github.com/Chaitanya980/UniSurvey",
-    liveUrl: "",                               
-  },
+  title: "Smart Contract Party Highlighter for Microsoft Word",
+  description:
+"Built a rule-based NLP add-in for Microsoft Word using TypeScript and Office.js to detect and highlight contracting parties. Leveraged regex, heuristic text parsing, and alias mapping for offline, privacy-safe document analysis.",
+  tags: [
+    "TypeScript",
+    "NLP",
+    "Regex",
+    "Office.js",
+    "Microsoft Word Add-in",
+    "Heuristic Text Processing",
+    "Rule-Based AI",
+    "Webpack",
+    "Document Automation",
+  ],
+  imageUrl: factchecker, // replace with your imported image asset
+  githubUrl: "https://github.com/Ankitraut4/Smart-Contract-Party-Highlighter-for-Microsoft-Word",
+  liveUrl: "", // (optional) can add a product demo video or doc add-in store link
+},
   {
-    title: "Zero-Downtime NGINX Architecture on AWS",
-    description:
-      "A fault-tolerant web server setup designed to ensure continuous availability of NGINX services.",
-    tags: ["AWS", "NGINX", "Keepalived", "HAProxy"],
-    imageUrl: rmtdevImg,                       // pick any banner you prefer
-    githubUrl:
-      "https://github.com/Chaitanya980/Zero-Downtime-NGINX-Architecture-on-AWS-with-Keepalived",
-    liveUrl: "",                               // infra project usually has no live demo
-  },
-  {
-    title: "Personal Portfolio Website",
-    description:
-      "Responsive multi-page portfolio and interactive highlights. Built using Next.js, React, and Tailwind CSS, and deployed on Vercel for fast, reliable performance across devices.",
-    tags: ["Next.js", "React", "Tailwind CSS", "Vercel"],
-    imageUrl: dock,
-    githubUrl: "",
-    liveUrl: "",                               // add if you host a demo
-  },
-  {
-    title: "DockPilot",
-    description:
-      "Generates production-ready Dockerfiles using AI, streamlining container setup with customizable prompts, secure builds, and automated deployment support.",
-    tags: ["Python", "Ollama", "LLaMA 3", "Docker", "GitHub Actions"],
-    imageUrl: dock,
-    githubUrl: "https://github.com/Chaitanya980/DockPilot",
-    liveUrl: "",                               // add if you host a demo
-  },
-  {
-    title: "F1 Grand Prix Winner Prediction",
-    description:
-      "Built high-accuracy Gradient Boosting model with Scikit-learn and FastF1 to predict Formula 1 winners",
-    tags: ["Python", "Scikit-learn", "FastF1", "Pandas"],
-    imageUrl: f1,                              // was uni
-    githubUrl:
-      "https://github.com/Chaitanya980/F1-Grand-Prix-Winner-Prediction-System",
-    liveUrl: "",                               // add if you have a Streamlit app etc.
-  },
+  title: "FaceSense – Intelligent Face Detection System",
+  description:
+"Developed a face detection system in Java using OpenCV’s LBP Cascade Classifier for real-time face recognition and visualization. Utilized matrix operations and feature extraction to draw bounding boxes and count faces efficiently.",
+  tags: [
+    "Java",
+    "OpenCV",
+    "Computer Vision",
+    "LBP Cascade Classifier",
+    "Image Processing",
+    "Feature Extraction",
+    "Face Detection",
+    "Object Detection",
+    "Machine Learning Fundamentals",
+  ],
+  imageUrl: dock,
+  githubUrl: "https://github.com/Ankitraut4/FaceSense-Intelligent-Face-Detection-System",
+  liveUrl: "", // optional if you later host sample demo
+},
   {
     title: "Loopify",
     description:
       "Loopify is a modern music web application built with React, Tailwind CSS, Redux, and RapidAPI, offering a seamless experience for music lovers.",
     tags: ["React", "Redux", "Tailwind", "RapidAPI"],
     imageUrl: wordanalyticsImg,                // or keep `uni` if you prefer
-    githubUrl: "https://github.com/Chaitanya980/Loopify",
-    liveUrl: "",                               // e.g., "https://loopify.vercel.app"
+    githubUrl: "",
+    liveUrl: "https://loopify.vercel.app",     // e.g., "https://loopify.vercel.app"
   },
 ] as const;
 
@@ -135,14 +198,14 @@ export const educationData = [
     institution: "George Mason University",
     location: "Fairfax, VA",
     grade: "3.8/4.0 GPA",
-    date: "2024 - 2025 (Pursuing)",
+    date: "2024 - 2025",
   },
   {
     title: "Bachelor in Computer Engineering",
     institution: "Savitribai Phule Pune University",
     location: "Pune, India",
-    grade: "3.5/4.0 GPA",
-    date: "2020 - 2024",
+    grade: "3.72/4.0 GPA",
+    date: "2018 - 2022",
   },
 ] as const;
 

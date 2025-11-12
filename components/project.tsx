@@ -2,7 +2,13 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { motion, useMotionValue, useSpring, useTransform, useScroll } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  useScroll,
+} from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import { projectsData } from "@/lib/data";
 
@@ -21,23 +27,32 @@ export default function Project({
 }: ProjectProps) {
   // Scroll reveal
   const revealRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: revealRef, offset: ["0 1", "1.33 1"] });
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  const { scrollYProgress } = useScroll({
+    target: revealRef,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
   // Parallax tilt
   const cardRef = useRef<HTMLDivElement>(null);
-  const mx = useMotionValue(0.5); // centered
-  const my = useMotionValue(0.5); // centered
-  const rotateX = useSpring(useTransform(my, [0, 1], [8, -8]), { stiffness: 200, damping: 18 });
-  const rotateY = useSpring(useTransform(mx, [0, 1], [-8, 8]), { stiffness: 200, damping: 18 });
+  const mx = useMotionValue(0.5);
+  const my = useMotionValue(0.5);
+  const rotateX = useSpring(useTransform(my, [0, 1], [8, -8]), {
+    stiffness: 200,
+    damping: 18,
+  });
+  const rotateY = useSpring(useTransform(mx, [0, 1], [-8, 8]), {
+    stiffness: 200,
+    damping: 18,
+  });
 
   function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
     const el = cardRef.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;  // 0..1
-    const y = (e.clientY - rect.top) / rect.height;  // 0..1
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
     mx.set(x);
     my.set(y);
     el.style.setProperty("--mx", `${e.clientX - rect.left}px`);
@@ -54,7 +69,7 @@ export default function Project({
   return (
     <motion.div
       ref={revealRef}
-      style={{ scale: scaleProgess, opacity: opacityProgess }}
+      style={{ scale: scaleProgress, opacity: opacityProgress }}
       className="group relative mb-3 sm:mb-8 last:mb-0"
     >
       {/* Glow border wrapper */}
@@ -69,19 +84,20 @@ export default function Project({
         {/* Card */}
         <section
           className="relative rounded-2xl overflow-hidden bg-gray-100/95 dark:bg-white/10 border border-black/5
-                     sm:h-[15rem] max-w-[30rem] cursor-default backdrop-blur
+                     max-w-[30rem] cursor-default backdrop-blur
                      transition-colors duration-300 hover:bg-gray-200/95 dark:hover:bg-white/20
-                     focus-within:ring-2 focus-within:ring-indigo-500"
+                     focus-within:ring-2 focus-within:ring-indigo-500
+                     h-auto min-h-[22rem] sm:min-h-[24rem] lg:min-h-[26rem]"
           tabIndex={0}
           aria-label={title}
         >
-          {/* Spotlight underlay (keep below) */}
+          {/* Spotlight underlay */}
           <div
             className="card-spotlight absolute inset-0 z-0 opacity-0
                        group-hover:opacity-100 transition-opacity duration-300"
           />
 
-          {/* Actions (Code / Live) – top-most */}
+          {/* Top Buttons */}
           {hasActions && (
             <div
               className="absolute right-3 top-3 z-20 flex items-center gap-2
@@ -119,22 +135,22 @@ export default function Project({
             </div>
           )}
 
-          {/* Content (above spotlight, below action bar) */}
+          {/* Content */}
           <div
-            className="relative z-10 pt-4 pb-7 px-5 sm:pt-6 flex flex-col h-full"
+            className="relative z-10 pt-5 pb-6 px-5 flex flex-col"
             style={{ transform: "translateZ(24px)" }}
           >
-            <h3 className="text-2xl font-semibold">{title}</h3>
-            <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+            <h3 className="text-2xl font-semibold break-words">{title}</h3>
+            <p className="mt-3 leading-relaxed text-gray-700 dark:text-white/70 break-words">
               {description}
             </p>
 
-            {tags.length > 0 && (
-              <ul className="mt-3 flex flex-wrap gap-2">
+            {tags && tags.length > 0 && (
+              <ul className="mt-4 flex flex-wrap gap-2">
                 {tags.map((tag) => (
                   <li
                     key={tag}
-                    className="rounded-md bg-white/10 px-2 py-1 text-xs text-gray-600 dark:text-gray-300
+                    className="rounded-full bg-white/10 px-2.5 py-1 text-xs text-gray-700 dark:text-gray-300
                                transition-transform duration-200 hover:-translate-y-0.5"
                     style={{ transform: "translateZ(24px)" }}
                   >
