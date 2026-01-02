@@ -101,6 +101,23 @@ export const projectsData = [
   githubUrl: "https://github.com/Ankitraut4/Hospital-Reception-Service",
   liveUrl: "", // optional if you deploy the app
 },
+   {
+  title: "Voice-to-Insights Pipeline for Air Traffic Operations",
+  description:
+"A full-stack pipeline that transforms ATC audio into searchable transcripts and real-time operational insights, featuring modular backend processing and an interactive analytics dashboard.",
+  tags: [
+    "Python",
+    "Speech-to-Text (Whisper / Vosk / Azure)",
+    "Audio Processing (pydub, librosa)",
+    "NLP (spaCy, Transformers)",
+    "Streamlit",
+    "Pandas",
+    "NumPy",
+  ],
+  imageUrl: factchecker, // replace with your actual imported image
+  githubUrl: "https://github.com/Ankitraut4/Voice-to-Insights-Pipeline-for-Air-Traffic-Operations",
+  liveUrl: "", // optional if you deploy the app
+},
  {
   title: "NLP-Powered SQL Query Generation System",
   description:
@@ -122,6 +139,25 @@ export const projectsData = [
     "https://github.com/Ankitraut4/NLP-Powered-SQL-Query-Generation-System-for-Interactive-Database-Querying",
   liveUrl:
     "https://huggingface.co/spaces/Rushikesh-S-Ware/NLP-SQL-Transformer",
+},
+   {
+  title: "DNS Cache Poisoning & Defence Via DNSSEC Validation",
+  description:
+"Implements real DNS cache poisoning and DNSSEC validation using live packet sniffing and Wireshark-based analysis to verify attack success and defense effectiveness.",
+  tags: [
+    "Python",
+    "Flask",
+    "React",
+    "Docker & Docker Compose",
+    "BIND9 (DNS Server)",
+    "DNS Cache Poisoning",
+    "DNSSEC",
+    "Wireshark",
+    "TCPDump",
+  ],
+  imageUrl: factchecker, // replace with your imported image asset
+  githubUrl: "https://github.com/Ankitraut4/DNS-CACHE-POISONING-DEFENCE-VIA-DNSSEC-VALIDATION",
+  liveUrl: "", // optional — you can host a simple demo if needed
 },
   {
   title: "Pacman Game",
