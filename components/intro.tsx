@@ -57,21 +57,27 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-[60rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
-      <div className="flex items-center justify-center">
-        <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "tween", duration: 0.2 }}
-          >
-            
-          </motion.div>
-        </div>
-      </div>
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-10 mt-4 px-4">
+        <motion.div
+          className="relative flex-shrink-0"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ type: "tween", duration: 0.2 }}
+        >
+          <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px]">
+            <Image
+              src="/images/ankit-photo.jpeg"
+              alt="Ankit Raut"
+              quality={95}
+              fill
+              className="rounded-full object-cover object-[60%_50%] border-[0.35rem] border-white shadow-xl"
+            />
+          </div>
+        </motion.div>
 
-      <div className="mb-10 mt-4 px-4">
+        <div className="flex-1">
         <motion.h1
           className="mb-2 text-2xl font-medium !leading-[1.5] sm:text-4xl"
           initial={{ opacity: 0, y: 100 }}
@@ -118,6 +124,7 @@ export default function Intro() {
           <Highlight gradient="net">iOS app interfaces</Highlight> - focused on building reliable, scalable, and high-performance software.
           Currently working as a Full-Stack Engineer & Cloud Infrastructure Lead at{" YesTech Crop."}
         </motion.p>
+        </div>
       </div>
 
       <motion.div
