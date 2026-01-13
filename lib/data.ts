@@ -218,6 +218,25 @@ export const projectsData = [
   liveUrl: "", // optional if you later host sample demo
 },
   {
+  title: "Relational-to-MongoDB Data Migration Using Mongo-Syphon",
+  description: "Implemented a relational-to-MongoDB data migration prototype using the MongoSyphon engine, focusing on schema mapping, batch ingestion, and document modeling.",
+  tags: [
+    "Java",
+"MongoDB",
+"PostgreSQL",
+"ETL",
+"Relational-to-NoSQL Migration",
+"Schema Mapping",
+"Batch Processing",
+"Document Modeling",
+"Data Validation",
+
+  ],
+  imageUrl: factchecker, // replace with your image variable
+  githubUrl: "https://github.com/Ankitraut4/Relational-to-MongoDB-Data-Migration-Using-Mongo-Syphon",
+  liveUrl: "", // add if you later host a viewer or demo
+},
+  {
     title: "Loopify",
     description:
       "Loopify is a modern music web application built with React, Tailwind CSS, Redux, and RapidAPI, offering a seamless experience for music lovers.",
@@ -233,7 +252,7 @@ export const educationData = [
     title: "Master's in Computer Science",
     institution: "George Mason University",
     location: "Fairfax, VA",
-    grade: "3.8/4.0 GPA",
+    grade: "3.67/4.0 GPA",
     date: "2024 - 2025",
   },
   {
