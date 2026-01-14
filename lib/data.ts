@@ -238,8 +238,7 @@ export const projectsData = [
 },
   {
   title: "AWS Data Landing Zone Implementation (CDK + Control Tower) ",
-  description: "Implemented a multi-account AWS data landing zone using AWS CDK and Control Tower, applying AWS Organizations, SCP guardrails, secure VPC baselines, least-privilege IAM access, and centralized logging to support compliant, production-ready cloud 
-environments.",
+  description: "Implemented a multi-account AWS data landing zone using AWS CDK and Control Tower, applying AWS Organizations, SCP guardrails, secure VPC baselines, least-privilege IAM access, and centralized logging to support compliant, production-ready cloud environments.",
   tags: [
         "AWS",
     "AWS CDK",
