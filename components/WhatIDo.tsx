@@ -126,6 +126,58 @@ export default function WhatIDo() {
             </div>
           </motion.div>
 
+          {/* Frontend Engineering */}
+<motion.div
+  variants={item}
+  className="grid items-center gap-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] p-6 shadow-sm backdrop-blur-sm"
+>
+  <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[auto,1fr]">
+    <Deco />
+    <div>
+      <div className="flex items-center gap-3">
+        <Layout className="h-6 w-6 text-indigo-500" />
+        <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+          Frontend Engineering & Web Platforms
+        </h3>
+      </div>
+
+      <div className="mt-3 flex flex-wrap gap-2">
+        {[
+          "HTML5",
+          "CSS3 / SCSS",
+          "JavaScript (ES6+)",
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Angular",
+        ].map(t => (
+          <Pill key={t} label={t} />
+        ))}
+      </div>
+
+      <ul className="mt-4 space-y-2">
+        <Bullet>
+          Built scalable, responsive web applications with React, Next.js, and
+          Angular, focusing on performance, accessibility, and maintainability.
+        </Bullet>
+        <Bullet>
+          Developed modular UI components using TypeScript and SCSS, enforcing
+          strict typing and consistent design patterns.
+        </Bullet>
+        <Bullet>
+          Integrated frontend applications with REST APIs, handling
+          authentication flows, error states, and asynchronous data loading.
+        </Bullet>
+        <Bullet>
+          Improved page load and rendering performance using code splitting,
+          memoization, and modern ES6+ features.
+        </Bullet>
+      </ul>
+    </div>
+  </div>
+</motion.div>
+
+
           {/* Backend Engineering */}
           <motion.div variants={item} className="grid items-center gap-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] p-6 shadow-sm backdrop-blur-sm">
             <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[auto,1fr]">
@@ -138,7 +190,7 @@ export default function WhatIDo() {
                   </h3>
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {["Golang", "Python", "Spring Boot", "FastAPI", "PostgreSQL", "DynamoDB", "Kafka/SNS/SQS"].map(t => <Pill key={t} label={t} />)}
+                  {["Golang", "Python", "Spring Boot", "Node.js", "FastAPI", "PostgreSQL", "DynamoDB", "Kafka/SNS/SQS"].map(t => <Pill key={t} label={t} />)}
                 </div>
                 <ul className="mt-4 space-y-2">
                   <Bullet>Built microservices handling 2M+ monthly requests with 98% uptime.</Bullet>
