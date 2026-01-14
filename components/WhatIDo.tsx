@@ -126,7 +126,7 @@ export default function WhatIDo() {
             </div>
           </motion.div>
 
-          {/* Frontend Engineering */}
+          /* {/* Frontend Engineering */}
           <motion.div
             variants={item}
             className="grid items-center gap-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/70 dark:bg-white/[0.03] p-6 shadow-sm backdrop-blur-sm">
@@ -174,7 +174,7 @@ export default function WhatIDo() {
                 </ul>
               </div>
             </div>
-          </motion.div>
+          </motion.div> */
 
 
           {/* Backend Engineering */}
