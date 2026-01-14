@@ -237,6 +237,24 @@ export const projectsData = [
   liveUrl: "", // add if you later host a viewer or demo
 },
   {
+  title: "AWS Data Landing Zone Implementation (CDK + Control Tower) ",
+  description:
+"Implemented a multi-account AWS data landing zone using AWS CDK and Control Tower, applying AWS Organizations, SCP guardrails, secure VPC baselines, least-privilege IAM access, and centralized logging to support compliant, production-ready cloud 
+environments.",
+  tags: [
+    "AWS",
+    "AWS CDK",
+    "AWS Control Tower",
+    "Infrastructure as Code",
+    "Multi-Account AWS",
+    "Cloud Security",
+    "Compliance & Governance",
+  ],
+  imageUrl: factchecker, // replace with your actual imported image
+  githubUrl: "https://github.com/Ankitraut4/AWS-Data-Landing-Zone-Implementation-CDK-Control-Tower-",
+  liveUrl: "", // optional if you deploy the app
+},
+  {
     title: "Loopify",
     description:
       "Loopify is a modern music web application built with React, Tailwind CSS, Redux, and RapidAPI, offering a seamless experience for music lovers.",
