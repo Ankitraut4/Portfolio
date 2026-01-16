@@ -160,6 +160,29 @@ export const projectsData = [
   liveUrl: "", // optional — you can host a simple demo if needed
 },
   {
+  title: "Agentic Orchestration Framework for Multi-Tool AI",
+  description:
+"Built an agentic AI platform on Snowflake Cortex that uses LLM-based planning to route natural-language requests across RAG, Text2SQL, Python, and SQL tools, enabling multi-step, parallel workflows for data analysis, automation, and developer-focused use cases.",
+  tags: [
+    "Python",
+  "Agentic AI",
+  "LLM Orchestration",
+  "Multi-Agent Systems",
+  "Snowflake Cortex",
+  "Async Programming",
+  "RAG",
+  "Pydantic",
+  "Workflow Automation",
+  "Parallel Execution",
+  "Multi-Tool Integration",
+  "Structured Data Analysis",
+  "Unstructured Data Analysis",
+  ],
+  imageUrl: factchecker, // replace with your imported image asset
+  githubUrl: "https://github.com/Ankitraut4/Agentic-Orchestration-Framework-for-Multi-Tool-AI",
+  liveUrl: "", // optional — you can host a simple demo if needed
+},
+  {
   title: "Pacman Game",
   description:
 "Implemented a Perceptron-based classifier from scratch using NumPy for digit and Pacman datasets. Added CLI support for training and testing, with feature-weight visualization to highlight model interpretability and algorithmic depth.",
