@@ -171,12 +171,9 @@ export const projectsData = [
   "Snowflake Cortex",
   "Async Programming",
   "RAG",
-  "Pydantic",
   "Workflow Automation",
   "Parallel Execution",
   "Multi-Tool Integration",
-  "Structured Data Analysis",
-  "Unstructured Data Analysis",
   ],
   imageUrl: factchecker, // replace with your imported image asset
   githubUrl: "https://github.com/Ankitraut4/Agentic-Orchestration-Framework-for-Multi-Tool-AI",
