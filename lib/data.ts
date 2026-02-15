@@ -23,7 +23,7 @@ import { table } from "console";
 
 export const experiencesData = [
   {
-    title: "Full-Stack Engineer & Cloud Infrastructure Lead",
+    title: "Full-Stack Engineer (Backend & Infrastructure)",
     location: "YesTech Corp — Remote (USA)",
     date: "Feb 2025 – Present",
     description: [
