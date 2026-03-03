@@ -27,10 +27,10 @@ export const experiencesData = [
     location: "PTC — Remote (Boston, MA)",
     date: "Feb 2026 – Present",
     description: [
-      "Own design and delivery of Go-based distributed services on AWS with 99%+ availability."
-      "Architected event-driven serverless systems enabling scalable, fault-tolerant backend workloads."
-      "Built production observability stack → reduced MTTR ~30% and improved reliability."
-      "Led blue-green CI/CD rollout and cloud optimization → cut incidents ~40% and saved ~$1K/month."
+      "Own design and delivery of Go-based distributed services on AWS with 99%+ availability.",
+      "Architected event-driven serverless systems enabling scalable, fault-tolerant backend workloads.",
+      "Built production observability stack → reduced MTTR ~30% and improved reliability.",
+      "Led blue-green CI/CD rollout and cloud optimization → cut incidents ~40% and saved ~$1K/month.",
     ],
     icon: React.createElement(LuBriefcase),
   },
@@ -39,10 +39,10 @@ export const experiencesData = [
     location: "Citi — United States",
     date: "Jan 2025 – Sep 2025",
     description: [
-      "Engineered resilient Spring Boot microservices for high-volume financial transactions."
-      "Designed Kafka-driven real-time processing pipelines for system decoupling."
-      "Implemented idempotency and fault-tolerance patterns across services."
-      "Reduced database latency by ~25% through query optimization and indexing."
+      "Engineered resilient Spring Boot microservices for high-volume financial transactions.",
+      "Designed Kafka-driven real-time processing pipelines for system decoupling.",
+      "Implemented idempotency and fault-tolerance patterns across services.",
+      "Reduced database latency by ~25% through query optimization and indexing.",
     ],
     icon: React.createElement(LuBriefcase),
   },
@@ -51,10 +51,10 @@ export const experiencesData = [
     location: "LTIMindtree — Pune, India",
     date: "Sep 2022 – Dec 2023",
     description: [
-      "Built Spring Boot microservices handling 2M+ requests/month with 98% uptime."
-      "Developed versioned APIs supporting 30K+ daily transactions."
-      "Improved Kafka/SNS/SQS throughput 30–35% via messaging optimization."
-      "Reduced production defects by ~40% through integration automation."
+      "Built Spring Boot microservices handling 2M+ requests/month with 98% uptime.",
+      "Developed versioned APIs supporting 30K+ daily transactions.",
+      "Improved Kafka/SNS/SQS throughput 30–35% via messaging optimization.",
+      "Reduced production defects by ~40% through integration automation.",
     ],
     icon: React.createElement(LuBriefcase),
   },
@@ -63,9 +63,9 @@ export const experiencesData = [
     location: "Zentek Infosoft — India",
     date: "May 2021 – Aug 2022",
     description: [
-      "Developed Java/Spring Boot backend services for enterprise workflow systems."
-      "Designed REST APIs backed by PostgreSQL with performance-focused tuning."
-      "Contributed to containerization and cloud migration initiatives."
+      "Developed Java/Spring Boot backend services for enterprise workflow systems.",
+      "Designed REST APIs backed by PostgreSQL with performance-focused tuning.",
+      "Contributed to containerization and cloud migration initiatives.",
     ],
     icon: React.createElement(LuBriefcase),
   },
