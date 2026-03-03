@@ -23,38 +23,49 @@ import { table } from "console";
 
 export const experiencesData = [
   {
-    title: "Full-Stack Engineer (Backend & Infrastructure)",
-    location: "YesTech Corp — Remote (USA)",
-    date: "Feb 2025 – Present",
+    title: "Software Engineer II",
+    location: "PTC — Remote (Boston, MA)",
+    date: "Feb 2026 – Present",
     description: [
-      "Re-architected AI image-generation backend (Go + Python on AWS Athena, DynamoDB, S3, Lambda) → cut latency 25% and raised reliability 40%.",
-      "Built typed SDKs and observability stack (CloudWatch + Bedrock metrics) powering 500+ AI workflows/month with automated rollbacks.",
-      "Reduced AWS cost by ≈ $900/month via cross-region caching and Terraform-based infrastructure-as-code.",
-      "Mentored 7 engineers on CI/CD pipelines and incident post-mortems, improving deployment stability 45%.",
+      "Own design and delivery of Go-based distributed services on AWS with 99%+ availability."
+      "Architected event-driven serverless systems enabling scalable, fault-tolerant backend workloads."
+      "Built production observability stack → reduced MTTR ~30% and improved reliability."
+      "Led blue-green CI/CD rollout and cloud optimization → cut incidents ~40% and saved ~$1K/month."
+    ],
+    icon: React.createElement(LuBriefcase),
+  },
+  {
+    title: "Software Engineer",
+    location: "Citi — United States",
+    date: "Jan 2025 – Sep 2025",
+    description: [
+      "Engineered resilient Spring Boot microservices for high-volume financial transactions."
+      "Designed Kafka-driven real-time processing pipelines for system decoupling."
+      "Implemented idempotency and fault-tolerance patterns across services."
+      "Reduced database latency by ~25% through query optimization and indexing."
     ],
     icon: React.createElement(LuBriefcase),
   },
   {
     title: "Software Engineer P1",
-    location: "LTIMindtree Limited — Pune, India",
-    date: "Jun 2022 – Jan 2024",
+    location: "LTIMindtree — Pune, India",
+    date: "Sep 2022 – Dec 2023",
     description: [
-      "Designed and operated distributed Go/Spring Boot microservices handling 2M+ requests/month @ 98% uptime with rate limiting and load balancing.",
-      "Integrated Kafka/SQS event pipelines achieving +35% throughput and exactly-once delivery semantics.",
-      "Delivered multi-tenant API versioning + contract testing → zero breaking changes across 30k transactions/day.",
-      "Automated CI/CD (Jenkins + Docker + Terraform) reducing deployment failures 40%.",
-      "Authored RFCs and led architecture reviews increasing release velocity 15%.",
+      "Built Spring Boot microservices handling 2M+ requests/month with 98% uptime."
+      "Developed versioned APIs supporting 30K+ daily transactions."
+      "Improved Kafka/SNS/SQS throughput 30–35% via messaging optimization."
+      "Reduced production defects by ~40% through integration automation."
     ],
     icon: React.createElement(LuBriefcase),
   },
   {
-    title: "Java Full-Stack Developer Intern",
-    location: "LTIMindtree Limited — Pune, India",
-    date: "Feb 2022 – May 2022",
+    title: "Software Developer",
+    location: "Zentek Infosoft — India",
+    date: "May 2021 – Aug 2022",
     description: [
-      "Shipped Spring Boot + Angular features across 5 production releases; optimized PostgreSQL schema (−120 ms p95 latency).",
-      "Added in-memory caching layer supporting 2k+ concurrent users with 99.8% success rate.",
-      "Automated hospital reception workflows (450+ daily appointments) → −20% check-in time and −15% data-entry errors.",
+      "Developed Java/Spring Boot backend services for enterprise workflow systems."
+      "Designed REST APIs backed by PostgreSQL with performance-focused tuning."
+      "Contributed to containerization and cloud migration initiatives."
     ],
     icon: React.createElement(LuBriefcase),
   },
@@ -216,7 +227,7 @@ export const projectsData = [
   ],
   imageUrl: factchecker, // replace with your imported image asset
   githubUrl: "https://github.com/Ankitraut4/Smart-Contract-Party-Highlighter-for-Microsoft-Word",
-  liveUrl: "", // (optional) can add a product demo video or doc add-in store link
+  liveUrl: "", // (optional) can add a product demo video or doc, add-in store link
 },
   {
   title: "FaceSense – Intelligent Face Detection System",
@@ -235,7 +246,7 @@ export const projectsData = [
   ],
   imageUrl: dock,
   githubUrl: "https://github.com/Ankitraut4/FaceSense-Intelligent-Face-Detection-System",
-  liveUrl: "", // optional if you later host sample demo
+  liveUrl: "", // optional if you later host a sample demo
 },
   {
   title: "Relational-to-MongoDB Data Migration Using Mongo-Syphon",
