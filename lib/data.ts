@@ -23,7 +23,7 @@ import { table } from "console";
 
 export const experiencesData = [
   {
-    title: "Software Engineer II",
+    title: "Software Engineer",
     location: "PTC — Remote (Boston, MA)",
     date: "Feb 2026 – Present",
     description: [
