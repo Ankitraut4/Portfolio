@@ -24,7 +24,7 @@ import { table } from "console";
 export const experiencesData = [
   {
     title: "Senior Full Stack Software Engineer",
-    location: "USA",
+    location: "Citi - USA",
     date: "May 2026 – Present",
    description: [
   "Added AI-assisted capabilities to banking workflows by connecting Java 17/Spring Boot REST services with Python/FastAPI, LLMs, and RAG, reducing manual research and information-processing effort by 25% for internal users.",
