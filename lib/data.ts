@@ -63,7 +63,7 @@ failure analysis, response guardrails, access controls, audit logging, and human
     icon: React.createElement(LuBriefcase),
   },
   {
-    title: "Software Developer",
+    title: "Associate Software Engineer",
     location: "Zentek Infosoft — India",
     date: "May 2021 – Aug 2022",
     description: [
