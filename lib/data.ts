@@ -26,17 +26,16 @@ export const experiencesData = [
     title: "Senior Full Stack Software Engineer",
     location: "USA",
     date: "May 2026 – Present",
-    description: [
-      "Added AI-assisted capabilities to banking workflows by connecting Java 17/Spring Boot REST services with Python/FastAPI, LLMs, and RAG, reducing 
-manual research and information-processing effort by 25% for internal users. ",
-      "Built RAG services that processed enterprise documents through chunking, embeddings, and vector search using LangChain and 
-PostgreSQL/pgvector, while LangGraph coordinated retrieval, internal API/database calls, validation, and approval-oriented workflow steps. ",
-      "Improved grounded-response quality by 18% and reduced average AI-service latency by 22% through prompt refinement, metadata filtering, re
-ranking, vector-search tuning, caching, and asynchronous Python/Kafka processing across distributed services.",
-      "Helped support 50K+ monthly requests while improving reliability through application and LLM latency monitoring, token and retrieval tracking, 
-failure analysis, response guardrails, access controls, audit logging, and human review for sensitive banking workflows.",
-    ],
-    icon: React.createElement(LuBriefcase),
+   description: [
+  "Added AI-assisted capabilities to banking workflows by connecting Java 17/Spring Boot REST services with Python/FastAPI, LLMs, and RAG, reducing manual research and information-processing effort by 25% for internal users.",
+
+  "Built RAG services that processed enterprise documents through chunking, embeddings, and vector search using LangChain and PostgreSQL/pgvector, while LangGraph coordinated retrieval, internal API/database calls, validation, and approval-oriented workflow steps.",
+
+  "Improved grounded-response quality by 18% and reduced average AI-service latency by 22% through prompt refinement, metadata filtering, reranking, vector-search tuning, caching, and asynchronous Python/Kafka processing across distributed services.",
+
+  "Helped support 50K+ monthly requests while improving reliability through application and LLM latency monitoring, token and retrieval tracking, failure analysis, response guardrails, access controls, audit logging, and human review for sensitive banking workflows.",
+],
+icon: React.createElement(LuBriefcase),
   },
   // {
   //   title: "Software Engineer",
