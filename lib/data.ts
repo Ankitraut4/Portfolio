@@ -38,21 +38,21 @@ failure analysis, response guardrails, access controls, audit logging, and human
     ],
     icon: React.createElement(LuBriefcase),
   },
+  // {
+  //   title: "Software Engineer",
+  //   location: "Citi — United States",
+  //   date: "Jan 2025 – Sep 2025",
+  //   description: [
+  //     "Engineered resilient Spring Boot microservices for high-volume financial transactions.",
+  //     "Designed Kafka-driven real-time processing pipelines for system decoupling.",
+  //     "Implemented idempotency and fault-tolerance patterns across services.",
+  //     "Reduced database latency by ~25% through query optimization and indexing.",
+  //   ],
+  //   icon: React.createElement(LuBriefcase),
+  // },
   {
     title: "Software Engineer",
-    location: "Citi — United States",
-    date: "Jan 2025 – Sep 2025",
-    description: [
-      "Engineered resilient Spring Boot microservices for high-volume financial transactions.",
-      "Designed Kafka-driven real-time processing pipelines for system decoupling.",
-      "Implemented idempotency and fault-tolerance patterns across services.",
-      "Reduced database latency by ~25% through query optimization and indexing.",
-    ],
-    icon: React.createElement(LuBriefcase),
-  },
-  {
-    title: "Software Engineer P1",
-    location: "LTIMindtree — Pune, India",
+    location: "LTIMindtree — India",
     date: "Sep 2022 – Dec 2023",
     description: [
       "Built Spring Boot microservices handling 2M+ requests/month with 98% uptime.",
